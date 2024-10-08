@@ -1,6 +1,4 @@
-# React Telegram Sticker Viewer
-<!-- 
-[![React Telegram Sticker Viewer](https://img.youtube.com/vi/8WAD7H5ApeA/0.jpg)](https://www.youtube.com/watch?v=8WAD7H5ApeA "React Telegram Sticker Viewer") -->
+# react-telegram-sticker-viewer
 
 ## Install
 
@@ -10,58 +8,43 @@ $ npm install react-telegram-sticker-viewer
 
 ## Usage
 
-For Demo, you can see: [https://kokim2022.github.io/react-telegram-sticker-viewer](https://kokim2022.github.io/react-telegram-sticker-viewer)
+For a live demo, visit: [https://kokim2022.github.io/react-telegram-sticker-viewer/](https://kokim2022.github.io/react-telegram-sticker-viewer/)
+
+### Example
 
 ```tsx
 import React, { useState } from 'react';
 import ReactTelegramStickerViewer from 'react-telegram-sticker-viewer';
-import 'react-telegram-sticker-viewer/style.css';
 
 const App: React.FC = () => {
-  const [tgsUrl, setTgsUrl] = useState<string>('https://path-to-default.tgs');
+  const [tgsUrl, setTgsUrl] = useState<string>(
+    'https://cdn.chatapi.net/stickers/telegram/1c49672ec5dbeef5cfd517996acf2bac/file_10.tgs'
+  );
 
   return (
-    <div>
-      <ReactTelegramStickerViewer tgsUrl={tgsUrl} style={{ height: '300px', width: '300px' }} />
-      <input 
-        type="text" 
-        value={tgsUrl} 
-        onChange={(e) => setTgsUrl(e.target.value)} 
-        placeholder="Enter TGS URL" 
-      />
-    </div>
+    <ReactTelegramStickerViewer
+      tgsUrl={tgsUrl}
+      // Optional: You can pass a custom CORS proxy URL if needed
+      // corsProxyServerUrl="https://your-custom-cors-proxy.com/?url="
+      style={{ height: '300px', width: '300px' }}
+    />
   );
 };
 
 export default App;
 ```
 
-## Predefined Stickers Example
+## Props of Component
 
-```tsx
-const predefinedUrls = [
-  { label: 'Sticker 1', url: 'https://path-to-sticker-1.tgs' },
-  { label: 'Sticker 2', url: 'https://path-to-sticker-2.tgs' },
-];
+- **`tgsUrl`** *(required, string)*  
+  The URL of the Telegram Sticker (TGS file) to be displayed.
 
-<select onChange={(e) => setTgsUrl(e.target.value)}>
-  {predefinedUrls.map((sticker, index) => (
-    <option key={index} value={sticker.url}>
-      {sticker.label}
-    </option>
-  ))}
-</select>
-```
+- **`style`** *(optional, object)*  
+  The style of the sticker viewer. Default is `{ height: '100px', width: '100px' }`.
 
-## Interfaces
-
-```ts
-interface PredefinedSticker {
-  label: string;
-  url: string;
-}
-```
+- **`corsProxyServerUrl`** *(optional, string)*  
+  You can provide a custom CORS proxy URL if needed. This is useful if you're encountering CORS issues when accessing the TGS URL.
 
 ## LICENSE
 
-MIT@[kokim2020](https://github.com/kokim2020).
+MIT @ [kokim2020](https://github.com/kokim2022).

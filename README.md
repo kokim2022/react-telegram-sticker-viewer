@@ -1,6 +1,6 @@
 # React Telegram Sticker Viewer
-
-[![React Telegram Sticker Viewer](https://img.youtube.com/vi/8WAD7H5ApeA/0.jpg)](https://www.youtube.com/watch?v=8WAD7H5ApeA "React Telegram Sticker Viewer")
+<!-- 
+[![React Telegram Sticker Viewer](https://img.youtube.com/vi/8WAD7H5ApeA/0.jpg)](https://www.youtube.com/watch?v=8WAD7H5ApeA "React Telegram Sticker Viewer") -->
 
 ## Install
 
@@ -10,7 +10,7 @@ $ npm install react-telegram-sticker-viewer
 
 ## Usage
 
-For Demo, you can see: [https://your-github-page.com/react-telegram-sticker-viewer](https://your-github-page.com/react-telegram-sticker-viewer)
+For Demo, you can see: [https://kokim2022.github.io/react-telegram-sticker-viewer](https://kokim2022.github.io/react-telegram-sticker-viewer)
 
 ```tsx
 import React, { useState } from 'react';

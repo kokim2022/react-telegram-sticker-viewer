@@ -17,7 +17,7 @@ const DEFAULT_CORS_PROXY =
 const ReactTelegramStickerViewer: React.FC<ReactTelegramStickerViewerProps> = ({
   tgsUrl,
   corsProxyServerUrl = DEFAULT_CORS_PROXY,
-  style = { height: '300px', width: '300px' },
+  style = { height: '100px', width: '100px' },
 }) => {
   const [lottieJson, setLottieJson] = useState<object | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -88,7 +88,7 @@ const ReactTelegramStickerViewer: React.FC<ReactTelegramStickerViewerProps> = ({
       {lottieJson && (
         <Player autoplay loop src={lottieJson} style={style}>
           <Controls
-            visible={true}
+            visible={false}
             buttons={['play', 'repeat', 'frame', 'debug']}
           />
         </Player>

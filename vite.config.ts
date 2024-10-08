@@ -5,6 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/react-telegram-sticker-viewer/",
   plugins: [react()],
+  resolve: {
+    alias: [
+      
+    ]
+  },
 })
 
 

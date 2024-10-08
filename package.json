@@ -7,10 +7,12 @@
     "src",
     "dist"
   ],
-  "module": "./dist/react-telegram-sticker-viewer.es.js",
+  "main": "./dist/react-telegram-sticker-viewer.umd.cjs",
+  "module": "./dist/react-telegram-sticker-viewer.js",
   "exports": {
     ".": {
-      "import": "./dist/react-telegram-sticker-viewer.es.js"
+      "import": "./dist/react-telegram-sticker-viewer.js",
+      "require": "./dist/react-telegram-sticker-viewer.umd.cjs"
     }
   },
   "homepage": "https://kokim2022.github.io/react-telegram-sticker-viewer",
@@ -33,7 +35,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "peerDependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.4",

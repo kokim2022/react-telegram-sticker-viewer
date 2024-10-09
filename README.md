@@ -1,5 +1,7 @@
 # react-telegram-sticker-viewer
 
+[![React Telegram Sticker Viewer](https://img.youtube.com/vi/aAvJIkxAPSE/0.jpg)](https://youtu.be/aAvJIkxAPSE "React Telegram Sticker Viewer")
+
 ## Install
 
 ```bash

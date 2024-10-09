@@ -1,7 +1,7 @@
 {
   "name": "react-telegram-sticker-viewer",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "files": [
     "src",
@@ -10,9 +10,11 @@
   "module": "./dist/react-telegram-sticker-viewer.es.js",
   "exports": {
     ".": {
-      "import": "./dist/react-telegram-sticker-viewer.es.js"
+      "import": "./dist/react-telegram-sticker-viewer.es.js",
+      "types": "./dist/types/index.d.ts"
     }
   },
+  "types": "./dist/types/index.d.ts",
   "homepage": "https://kokim2022.github.io/react-telegram-sticker-viewer",
   "description": "React component for viewing telegram sticker url with .tgs extension got from the telegram bot webhook",
   "keywords": [

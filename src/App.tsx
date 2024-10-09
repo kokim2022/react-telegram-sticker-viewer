@@ -1,12 +1,9 @@
 // src/App.tsx
 import React, { useState, ChangeEvent } from 'react';
 import ReactTelegramStickerViewer from './components/ReactTelegramStickerViewer';
+import { PredefinedSticker } from './types';
 
 // Define the structure of a predefined sticker URL
-interface PredefinedSticker {
-  label: string;
-  url: string;
-}
 
 const App: React.FC = () => {
   const [tgsUrl, setTgsUrl] = useState<string>(
